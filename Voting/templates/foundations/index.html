@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+{% block content %}
+<h1>Add your id</h1>
+<form class="search_form", action="{% url 'foundations:index' %}"> 
+    <input class="search_form_input", type="search", placeholder="Search", aria-label="Search", name="q">
+    <button type="submit">Search</button>
+</form>
+
+{% endblock %}

@@ -1,0 +1,11 @@
+<div class="menu">
+    <ul>
+    {% if user.is_authenticated %}
+        <a href="{% url 'foundations:logout' %}">Logout</a>
+    {% else %}
+        <a href="{% url 'foundations:registration' %}">Registration</a>
+        <a href="{% url 'foundations:login' %}">Login</a>
+    {% endif %}
+    </ul>
+</div>
+
