@@ -5,17 +5,12 @@ from foundations.models import Foundations, User
 from django.contrib.auth import authenticate, login
 from foundations.forms import VotersRegisrationsForm
 from django.urls import reverse_lazy
-from django.db.models import Q
+from django.shortcuts import get_object_or_404
 
 
-class Index(ListView):
-    model = User
+class Index(TemplateView):
     template_name: str = 'foundations/index.html'
-
-    def get_context_data(self, **kwargs):
-        query = self.request.GET.get("q")
-        obj = User.objects.filter(Q(id_card__icontains))
-        
+    
 
 
 class Registrashion(CreateView):
