@@ -14,8 +14,8 @@
         <p> {{ user.first_name }}</p>
     {% endfor %}
 {% else %}
-    {% for found in voters_for_found %}
-        <p> {{ user.first_name }}</p>
+    {% for voters in voters_for_found %}
+        <p> {{ voters.first_name }}</p>
     {% endfor %}
 {% endif %}
 
