@@ -1,21 +1,25 @@
 {% extends 'base.html' %}
-{% block content %}
 
+
+{% block content %}
 {% if voter %}
-    <p>{{ user.id_card }}</p>
-    <p>{{ user.email }}</p>
-    <p>{{ user.first_name }}</p>
-    <p>{{ user.last_name }}</p>
-    <p>{{ user.date_joined }}</p>
-    <p>{{ user.voting }}</p>
-    <p>{{ user.foundations }}</p>
+    <li>CARD ID : {{ voter.id_card }}</li>
+    <li>EMAIL : {{ voter.email }}</li>
+    <li>FIRST NAME : {{ voter.first_name }}</li>
+    <li>LAST NAME : {{ voter.last_name }}</li>
+    <li>DATE JOINED : {{ voter.date_joined }}</li>
+    <li>VOTING : {{ voter.voting }}</li>
+    <li>FOUND : {{ voter.foundations }}</li>
 {% elif users %}
+    Voting foundations: {{found}}
     {% for user in users %}
-        <p> {{ user.first_name }}</p>
+        <li> Voter : {{ user.first_name }}</li>
     {% endfor %}
 {% else %}
+    NAME OF FOUNDATIONS {{ found  }}
+    <p>List of voters: </p>
     {% for voters in voters_for_found %}
-        <p> {{ voters.first_name }}</p>
+        <li> FIRST NAME : {{ voters.first_name }}</li>
     {% endfor %}
 {% endif %}
 
