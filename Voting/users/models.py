@@ -13,7 +13,7 @@ class User(AbstractBaseUser, PermissionsMixin):
     last_name = models.CharField(max_length=150, blank=False)
     date_joined = models.DateTimeField(_('date joined'), auto_now_add=True)
     is_active = models.BooleanField(_('active'), default=True)
-    is_staff = models.BooleanField(_('staff status'),default=False)
+    is_staff = models.BooleanField(_('staff status'), default=False)
 
     voting = models.ForeignKey(
         Voting,
@@ -22,7 +22,7 @@ class User(AbstractBaseUser, PermissionsMixin):
         null=True,
         blank=True
     )
-    
+
     foundations = models.ForeignKey(
         Found,
         on_delete=models.CASCADE,
@@ -35,7 +35,6 @@ class User(AbstractBaseUser, PermissionsMixin):
 
     USERNAME_FIELD = 'id_card'
     REQUIRED_FIELDS = ['email']
-
 
     class Meta:
         verbose_name = _('user')
