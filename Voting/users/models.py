@@ -1,8 +1,7 @@
+from django.contrib.auth.models import AbstractBaseUser, PermissionsMixin
 from django.db import models
-from django.contrib.auth.models import AbstractBaseUser
-from django.contrib.auth.models import PermissionsMixin
 from django.utils.translation import ugettext_lazy as _
-from foundations.models import Voting, Found
+from foundations.models import Found, Voting
 from users.manager import CustomUserManager
 
 
@@ -39,10 +38,6 @@ class User(AbstractBaseUser, PermissionsMixin):
     class Meta:
         verbose_name = _('user')
         verbose_name_plural = _('users')
-
-    # def clean(self):
-    #     super().clean()
-    #     self.email = self.__class_/l)
 
     def get_full_name(self):
         """

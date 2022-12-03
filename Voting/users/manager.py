@@ -31,9 +31,3 @@ class CustomUserManager(BaseUserManager):
             raise ValueError('Superuser must have is_superuser=True.')
 
         return self._create_user(id_card, email, password, **extra_fields)
-
-    def search(self, query=None):
-        qs = self.get_queryset()
-        if query is not None:
-            qs = qs.filter(id_card=query).distinct()
-        return qs

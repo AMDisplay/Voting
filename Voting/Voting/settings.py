@@ -1,8 +1,7 @@
 import os
 from pathlib import Path
+
 from dotenv import load_dotenv
-
-
 
 load_dotenv()
 
@@ -31,7 +30,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    
+
     'foundations.apps.FoundationsConfig',
     'users.apps.UsersConfig',
 
@@ -82,7 +81,7 @@ DATABASES = {
         'HOST': os.getenv('DB_HOST'),
         'PORT': os.getenv('DB_PORT')
     }
-} 
+}
 
 
 # Password validation

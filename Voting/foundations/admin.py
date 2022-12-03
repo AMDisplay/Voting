@@ -1,6 +1,7 @@
 from django.contrib import admin
-from .models import Voting,Found
 from users.models import User
+
+from .models import Found, Voting
 
 admin.site.register(User)
 admin.site.register(Voting)
