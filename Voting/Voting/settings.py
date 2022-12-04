@@ -2,6 +2,7 @@ import os
 from pathlib import Path
 
 from dotenv import load_dotenv
+
 # dotenv_path = os.path.join(Path(__file__).resolve(strict=True).parent.parent.parent, 'infra\\.env')
 # print(dotenv_path)
 load_dotenv()
