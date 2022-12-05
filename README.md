@@ -1,5 +1,13 @@
 # Voting
 
+The project allows you to vote for the voter
+See who voted and for whom
+Allows you to find out who voted on what funds
+
+Technology stack:
+
+Python, django, postgresql, nginx, gunicorn, docker, docker-compose, git actions
+
 ## Install local project
 
 ### Download repositories
