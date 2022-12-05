@@ -4,7 +4,6 @@ from pathlib import Path
 from dotenv import load_dotenv
 
 # dotenv_path = os.path.join(Path(__file__).resolve(strict=True).parent.parent.parent, 'infra\\.env')
-# print(dotenv_path)
 load_dotenv()
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -18,7 +17,7 @@ BASE_DIR = Path(__file__).resolve(strict=True).parent.parent
 SECRET_KEY = '^lfkvwu)w3vzd6@cs682*fcla2k(bj#zhe=5)g5^$ad_m@-n*a'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['*']
 
@@ -84,7 +83,6 @@ DATABASES = {
         'PORT': os.getenv('DB_PORT')
     }
 }
-print(DATABASES)
 
 
 # Password validation
